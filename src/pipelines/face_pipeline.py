@@ -30,7 +30,7 @@ def get_face_embeddings(image_np):
 
     if image_np.dtype != np.uint8:
         image_np = image_np.astype(np.uint8)
-
+    image_np = np.ascontiguousarray(image_np, dtype=np.uint8)
     if len(image_np.shape) == 2:
         image_np = np.stack([image_np] * 3, axis=-1)
 
