@@ -24,8 +24,22 @@ def load_dlib_models():
     return detector,sp,facerec
 
 def get_face_embeddings(image_np):
-    detector,sp,facerec=load_dlib_models()
-    faces=detector(image_np,1)
+    detector, sp, facerec = load_dlib_models()
+
+    image_np = np.asarray(image_np)
+
+    if image_np.dtype != np.uint8:
+        image_np = image_np.astype(np.uint8)
+
+    if len(image_np.shape) == 2:
+        image_np = np.stack([image_np] * 3, axis=-1)
+
+    if image_np.shape[-1] == 4:
+        image_np = image_np[:, :, :3]
+
+    image_np = np.ascontiguousarray(image_np)
+
+    faces = detector(image_np, 1)
 
 
     encodings=[]
