@@ -4,7 +4,7 @@ import numpy as np
 import face_recognition_models
 from sklearn.svm import SVC
 import streamlit as st
-
+from PIL import Image
 
 from src.database.db import get_all_students
 
@@ -39,8 +39,8 @@ def get_face_embeddings(image_np):
 
     image_np = np.ascontiguousarray(image_np)
 
+    image_np = np.array(Image.fromarray(image_np).convert("RGB"), dtype=np.uint8)
     faces = detector(image_np, 1)
-
 
     encodings=[]
 
