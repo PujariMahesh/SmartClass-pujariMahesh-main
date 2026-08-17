@@ -6,8 +6,8 @@ import io
 @st.dialog("🔗 Share Class")
 def share_subject_dialog(subject_name, subject_code):
 
-    app_domain = "smartclass-main.streamlit.app"
-    join_url = f"{app_domain}/?join-code={subject_code}"
+    app_domain = app_domain = "https://smartclass-pujarimahesh-main.streamlit.app"
+    join_url = join_url = join_url = f"https://smartclass-pujarimahesh-main.streamlit.app/?join-code={subject_code}"
 
     # Generate QR Code
     qr = segno.make(join_url)
