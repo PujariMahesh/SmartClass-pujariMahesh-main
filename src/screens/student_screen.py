@@ -66,9 +66,15 @@ def student_dashboard():
 
 
         stats = stats_map.get(sid,{"total":0, "attended":0})
-        def unenroll_button():
-             if st.button("Unenroll from this course",type='tertiary',width='stretch',icon=':material/delete_forever:'):
-                unenroll_student_to_subject(student_id,sid)
+        def unenroll_button(sid=sid, subject_code=sub['subject_code']):
+             if st.button(
+                 "Unenroll from this course",
+                 type='tertiary',
+                 width='stretch',
+                 icon=':material/delete_forever:',
+                 key=f"unenroll_{student_id}_{subject_code}"
+             ):
+                unenroll_student_to_subject(student_id, sid)
                 st.markdown(
                                             f"""
                                             <div style="
