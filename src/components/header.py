@@ -5,7 +5,7 @@ def header_home():
     
     col1, col2, col3 = st.columns([1,2,1])
     with col2:
-        st.image("logo1.jpg",width=600)
+        st.image("logo1.jpg",use_column_width=True)
     
     
     st.markdown("""
@@ -22,10 +22,12 @@ def header_home():
         <style>
         .header-container {
             text-align: center;
+            margin-top:10px;
         }
         .header-container h1 {
-            font-size: 3vw;   /* scales with screen width */
+            font-size:clamp(1.5rem, 5vm,3rem);   /* scales with screen width */
             color: #2E86C1;   /* optional styling */
+            margin:0;
         }
         </style>
         """,
