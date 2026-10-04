@@ -8,7 +8,8 @@ from src.components.dialog_auto_enroll import auto_enroll_dialog
 def main():
     st.set_page_config(
         page_title='SmartClass - Making Attendance faster using AI',
-        page_icon="http://localhost:8501/media/88a100e5f3ea62189265269a6395bec3.jpg"
+        page_icon="logo1.jpg"
+        
     )
     if 'login_type' not in st.session_state:
         st.session_state['login_type']=None
