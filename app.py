@@ -36,17 +36,4 @@ main()
 
 
 
-st.markdown(
-    """
-    <style>
-    .stButton>button {
-        background-color: #007BFF;
-        color: white;
-        border-radius: 8px;
-        padding: 10px 20px;
-        font-size: 16px;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+
