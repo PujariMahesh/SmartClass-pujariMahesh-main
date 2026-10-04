@@ -139,48 +139,50 @@ def style_base_layout():
                 
                 
     
-                div.stButton > button[kind="primary"] {
-                    border-radius: 3.5rem !important;
-                    background-color: #2196F3 !important; /* Blue */
-                    color: #FFFFFF !important;
-                    padding: 10px 20px !important;
-                    font-size: 5px !important; 
-                    border:2px solid #000000 !important;
-                    transition: transform 0.25s ease-in-out !important;
-                }
-                div.stButton > button:hover[kind="primary"] {
-                    transform: scale(1.05) !important;
-                box-shadow: 0px 6px 10px rgba(0,0,0,0.3);
-                    }
+                        /* Primary button */
+                        div.stButton > button {
+                            border-radius: 3.5rem !important;
+                            background-color: #2196F3 !important;
+                            color: #FFFFFF !important;
+                            padding: 10px 20px !important;
+                            font-size: 16px !important; 
+                            border:2px solid #000000 !important;
+                            transition: transform 0.25s ease-in-out !important;
+                        }
+                        div.stButton > button:hover {
+                            transform: scale(1.05) !important;
+                            box-shadow: 0px 6px 10px rgba(0,0,0,0.3);
+                        }
 
-                    
-                div.stButton > button[kind="secondary"] {
-                                       border-radius: 3.5rem !important;
-                                       background-color: #2196F3 !important; /* Blue */
-                                       color: #FFFFFF !important;
-                                       padding: 10px 20px !important;
-                                       font-size: 5px !important; 
-                                       border:2px solid #000000 !important;
-                                       transition: transform 0.25s ease-in-out !important;
-                                   }
-                                   div.stButton > button:hover[kind="secondary"] {
-                                       transform: scale(1.05) !important;
-                                   box-shadow: 0px 6px 10px rgba(0,0,0,0.3);
-                                       } 
+                        /* Secondary button */
+                        div.stButton > button:nth-child(2) {
+                            border-radius: 3.5rem !important;
+                            background-color: #2196F3 !important;
+                            color: #FFFFFF !important;
+                            padding: 10px 20px !important;
+                            font-size: 16px !important; 
+                            border:2px solid #000000 !important;
+                            transition: transform 0.25s ease-in-out !important;
+                        }
+                        div.stButton > button:nth-child(2):hover {
+                            transform: scale(1.05) !important;
+                            box-shadow: 0px 6px 10px rgba(0,0,0,0.3);
+                        }
 
-                div.stButton > button[kind="tertiary"] {
-                                    border-radius: 3.5rem !important;
-                                    background-color: #D6E450 !important; /* Blue */
-                                    color: #000000 !important;
-                                    padding: 10px 20px !important;
-                                    font-size: 5px !important; 
-                                    border:2px solid #000000 !important;
-                                    transition: transform 0.25s ease-in-out !important;
-                                }
-                                div.stButton > button:hover[kind="tertiary"] {
-                                    transform: scale(1.05) !important;
-                                box-shadow: 0px 6px 10px rgba(0,0,0,0.3);
-                                    }
+                        /* Tertiary button */
+                        div.stButton > button:nth-child(3) {
+                            border-radius: 3.5rem !important;
+                            background-color: #D6E450 !important;
+                            color: #000000 !important;
+                            padding: 10px 20px !important;
+                            font-size: 16px !important; 
+                            border:2px solid #000000 !important;
+                            transition: transform 0.25s ease-in-out !important;
+                        }
+                        div.stButton > button:nth-child(3):hover {
+                            transform: scale(1.05) !important;
+                            box-shadow: 0px 6px 10px rgba(0,0,0,0.3);
+                        }
 
                 
 
